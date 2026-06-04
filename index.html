@@ -258,12 +258,94 @@
     .source a { color: var(--deep); }
 
     @media (max-width: 860px) {
-      header { min-height: 68vh; padding: 30px 0; }
+      header { min-height: 62vh; padding: 28px 0; }
+      .wrap { width: min(100% - 28px, 1120px); }
+      h1 { font-size: 34px; }
+      h2 { font-size: 24px; }
+      .subtitle { font-size: 16px; }
+      .pill { min-height: 32px; font-size: 14px; }
       .grid, .two, .cards { grid-template-columns: 1fr; }
-      section { padding: 20px; }
-      table { font-size: 14px; }
-      th, td { padding: 10px 8px; }
-      .time { white-space: normal; }
+      main { padding: 18px 0 42px; }
+      section {
+        margin: 16px 0;
+        padding: 18px;
+      }
+      .stat strong { font-size: 22px; }
+      table, thead, tbody, tr, th, td {
+        display: block;
+        width: 100%;
+      }
+      table {
+        border-collapse: separate;
+        border-spacing: 0;
+        font-size: 15px;
+      }
+      thead { display: none; }
+      tr {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--line);
+      }
+      tr:last-child { border-bottom: 0; }
+      td {
+        border-bottom: 0;
+        padding: 0;
+      }
+      td + td {
+        margin-top: 8px;
+      }
+      td:first-child {
+        color: var(--deep);
+        font-weight: 800;
+        font-size: 17px;
+        line-height: 1.35;
+      }
+      .time {
+        white-space: normal;
+        overflow-wrap: normal;
+        word-break: keep-all;
+      }
+      .tag {
+        margin-right: 4px;
+        margin-bottom: 2px;
+      }
+      .route-panel {
+        min-height: 300px;
+      }
+      .route-map {
+        height: 300px;
+      }
+      .map-label {
+        font-size: 12px;
+      }
+      .label-north {
+        left: 38%;
+      }
+      .card img {
+        height: 210px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .wrap { width: min(100% - 22px, 1120px); }
+      header {
+        min-height: 58vh;
+        padding: 24px 0;
+      }
+      h1 { font-size: 30px; }
+      h2 { font-size: 22px; }
+      section {
+        padding: 15px;
+        border-radius: 7px;
+      }
+      .notice {
+        padding: 13px 14px;
+      }
+      td:first-child {
+        font-size: 16px;
+      }
+      .card {
+        padding: 14px;
+      }
     }
   </style>
 </head>
